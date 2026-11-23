@@ -45,6 +45,11 @@ function App() {
       return 0;
     });
 
+  // Update the browser tab title whenever the number of results changes
+  useEffect(() => {
+    document.title = `CvSU Mini Store (${filteredProducts.length} results)`;
+  }, [filteredProducts.length]);
+
   return (
     <div className="app">
       <h1 className="app__title">CvSU Mini Store</h1>
